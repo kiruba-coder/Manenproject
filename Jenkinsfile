@@ -3,13 +3,13 @@ pipeline{
     agent any
     tools {
         maven 'maven'
-    }
+    } /*
     environment{
        ArtifactId = readMavenPom().getArtifactId()
        Version = readMavenPom().getVersion()
        Name = readMavenPom().getName()
        GroupId = readMavenPom().getGroupId()
-    }
+    } */
     stages {
         // Specify various stage with in stages
 
@@ -52,6 +52,7 @@ pipeline{
         } */
 
         // Stage 3 : Print some information
+        /*
        stage ('Print Environment variables'){
                     steps {
                         echo "Artifact ID is '${ArtifactId}'"
@@ -82,7 +83,7 @@ pipeline{
             
             }
         }
-/*
+
     // Stage 6 : Deploying the build artifact to Docker
         stage ('Deploy to Docker'){
             steps {
