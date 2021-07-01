@@ -47,7 +47,7 @@ pipeline{
                 version: '0.0.3-SNAPSHOT'
                }
             }
-        } */
+        } 
 
         // Stage 3 : Print some information
         /*
