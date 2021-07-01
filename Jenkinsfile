@@ -29,7 +29,7 @@ pipeline{
         }
 
         // Stage3 : Publish the artifacts to Nexus
-        stage ('Publish to Nexus'){
+        /*stage ('Publish to Nexus'){
             steps {
                 script {
 
@@ -47,10 +47,10 @@ pipeline{
                 version: '0.0.4-SNAPSHOT'
                }
             }
-        } 
+        }*/
 
-        // Stage 3 : Print some information
-        /*
+        /*// Stage 3 : Print some information
+        
        stage ('Print Environment variables'){
                     steps {
                         echo "Artifact ID is '${ArtifactId}'"
