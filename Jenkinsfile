@@ -33,18 +33,18 @@ pipeline{
             steps {
                 script {
 
-                def NexusRepo = Version.endsWith("SNAPSHOT") ? "VinaysDevOpsLab-SNAPSHOT" : "VinaysDevOpsLab-RELEASE"
+             //   def NexusRepo = Version.endsWith("SNAPSHOT") ? "VinaysDevOpsLab-SNAPSHOT" : "VinaysDevOpsLab-RELEASE"
                 nexusArtifactUploader artifacts: 
                 [[artifactId: 'demoapp',
                 classifier: '', 
-                file: 'target/demoapp-0.0.3-SNAPSHOT.war',
+                file: 'target/demoapp-0.0.4-SNAPSHOT.war',
                 type: 'war']],
                 credentialsId: 'bdf5f2e0-1307-4b21-91d1-836330a3f28c',
                 groupId: 'com.mavenproject',
                 nexusUrl: 'localhost:8081', nexusVersion: 'nexus3',
                 protocol: 'http',
                 repository: 'Demoapp-SNAPSHOT',
-                version: '0.0.3-SNAPSHOT'
+                version: '0.0.4-SNAPSHOT'
                }
             }
         } 
